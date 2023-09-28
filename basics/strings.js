@@ -1,8 +1,8 @@
-let firstName = "Opeyemi"
-let lastName = "Bello"
-let fullName = firstName + " " + lastName
+// let firstName = "Opeyemi"
+// let lastName = "Bello"
+// let fullName = firstName + " " + lastName
 
-console.log(fullName)
+// console.log(fullName)
 
 let city = "Akure"
 let country = "Nigeria"
