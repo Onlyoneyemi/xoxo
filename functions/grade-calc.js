@@ -1,7 +1,9 @@
 const gradeCalc = function (score, totalScore) {
-    const percent = (score / totalScore) * 100
-    let letterGrade = ""
 
+    if (typeof score === "number" && typeof totalScore === "number") {
+        const percent = (score / totalScore) * 100
+    let letterGrade = ""
+        
     if (percent >= 90) {
         letterGrade = "A"
     } else if (percent >= 80) {
@@ -15,7 +17,16 @@ const gradeCalc = function (score, totalScore) {
     }
 
     return `You got a ${letterGrade} (${percent}%).`
+    } else {
+        throw Error("Argument must be numbers")
+    }
+    
 }
 
-const result = gradeCalc(50, 100)
-console.log(result)
+try {
+    const result = gradeCalc("82", 100)
+    console.log(result)
+} catch (e) {
+    console.log(e.message)
+}
+
