@@ -17,11 +17,23 @@
 
 
 //Challenge Area
-let age = 7
- if (age <= 7) {
-    console.log("You will get the minor citizen discount.")
- }
+// let age = 7
+//  if (age <= 7) {
+//     console.log("You will get the minor citizen discount.")
+//  }
 
- if (age >= 65) {
-    console.log("You will get the  senior citizen discount.")
- }
+//  if (age >= 65) {
+//     console.log("You will get the  senior citizen discount.")
+//  }
+
+
+const EventEmitter = require("events")
+
+const Logger = require("./hello-world")
+const logger = new Logger()
+
+logger.on("messagelogged", (e) => {
+   console.log("listener was called", e)
+})
+
+logger.log("Message was logged")
